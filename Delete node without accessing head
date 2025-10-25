@@ -1,0 +1,18 @@
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+        this.next = null;
+    }
+}
+
+class Solution {
+    public void deleteNode(ListNode node) {
+        // Copy next node's data into this node
+        node.val = node.next.val;
+        // Skip over the next node
+        node.next = node.next.next;
+    }
+}
